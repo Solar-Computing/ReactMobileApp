@@ -1,60 +1,65 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
   View,
+  Text,
+  StyleSheet,
   Image
 } from 'react-native';
 
-class AwesomeProject extends Component {
-  render() {
-//     let pic = {
-//       uri: 'http://frostney.github.io/talks/react-native/slides/images/meme2.jpg'
-//       uri: 'http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
-//     };
-    return (
-//       <Image source={pic} style={{width: 193, height: 11}}/>
-      <Text>Hello {this.props.names}!</Text>
-    );
-  }
-}
-
-class LotsOfGreetings extends Component {
+class SolarApp extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
-        <AwesomeProject names='Rexxar' />
-        <AwesomeProject names='Jaina' />
-        <AwesomeProject names='Valeera' />
+        <View >
+            <View style={styles.navbar}>
+                <Image
+                    style={styles.navBarImage}
+                    source={require('./img/logo.png')}
+                />
+            </View>
+            <View style={styles.statusbar}>
+                <Text style={styles.statusbarTitles}>
+                    Settings
+                </Text>
+                <Text style={styles.statusbarTitles}>
+                    Data
+                </Text>
+                <Text style={styles.statusbarTitles}>
+                    Feed
+                </Text>
+            </View>
       </View>
     );
   }
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   instructions: {
-//     textAlign: 'center',
-//     color: '#333333',
-//     marginBottom: 5,
-//   },
-// });
+const styles = StyleSheet.create({
+    navbar: {
+        backgroundColor: '#2c3239',
+        paddingTop: 20,
+        paddingBottom: 1,
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    navBarImage: {
+        width: 40,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    statusbar: {
+        backgroundColor: '#191f28',
+        paddingTop: 3,
+        paddingBottom: 3,
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    statusbarTitles: {
+        color: '#F5FCFF',
+        justifyContent: 'center',
+        paddingLeft: 40,
+        flex: 1
+    }
+});
 
-AppRegistry.registerComponent('LotsOfGreetings', () => AwesomeProject);
+AppRegistry.registerComponent('SolarApp', () => SolarApp);
