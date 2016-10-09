@@ -1,0 +1,36 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 95,
+					"ch": 19
+				},
+				"to": {
+					"line": 95,
+					"ch": 40
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "TintColor",
+			"group": "SWITCH"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 96,
+					"ch": 21
+				},
+				"to": {
+					"line": 96,
+					"ch": 40
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "OnTintColor",
+			"group": "SWITCH"
+		}
+	]
+}
