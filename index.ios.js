@@ -15,6 +15,19 @@ import {
 
 class AwesomeProject extends Component {
   render() {
+    return (
+      <View style={{alignItems: 'center'}}>
+        <LotsOfGreetings names='Aayush' />
+        <LotsOfGreetings names='Leonie' />
+        <LotsOfGreetings names='Sujeeth' />
+        <LotsOfGreetings names='Tommy' />
+      </View>
+    );
+  }
+}
+
+class LotsOfGreetings extends Component {
+  render() {
 //     let pic = {
 //       uri: 'http://frostney.github.io/talks/react-native/slides/images/meme2.jpg'
 //       uri: 'http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
@@ -22,18 +35,6 @@ class AwesomeProject extends Component {
     return (
 //       <Image source={pic} style={{width: 193, height: 11}}/>
       <Text>Hello {this.props.names}!</Text>
-    );
-  }
-}
-
-class LotsOfGreetings extends Component {
-  render() {
-    return (
-      <View style={{alignItems: 'center'}}>
-        <AwesomeProject names='Rexxar' />
-        <AwesomeProject names='Jaina' />
-        <AwesomeProject names='Valeera' />
-      </View>
     );
   }
 }
@@ -57,4 +58,4 @@ class LotsOfGreetings extends Component {
 //   },
 // });
 
-AppRegistry.registerComponent('LotsOfGreetings', () => AwesomeProject);
+AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
