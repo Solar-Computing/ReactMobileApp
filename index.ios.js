@@ -10,21 +10,45 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  Animated
 } from 'react-native';
 
 class AwesomeProject extends Component {
   render() {
     return (
       <View style={{alignItems: 'center'}}>
-        <LotsOfGreetings names='Aayush' />
-        <LotsOfGreetings names='Leonie' />
-        <LotsOfGreetings names='Sujeeth' />
-        <LotsOfGreetings names='Tommy' />
+        <FadeInView names='Aayush' />
+        <FadeInView names='Leonie' />
+        <FadeInView names='Sujeeth' />
+        <FadeInView names='Tommy' />
       </View>
     );
   }
 }
+
+class FadeInView extends React.Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+       fadeAnim: new Animated.Value(0), // init opacity 0
+     };
+   }
+   componentDidMount() {
+     Animated.timing(          // Uses easing functions
+       this.state.fadeAnim,    // The value to drive
+       {toValue: 1}            // Configuration
+     ).start();                // Don't forget start!
+   }
+   render() {
+     return (
+       <Animated.View          // Special animatable View
+         style={{opacity: this.state.fadeAnim}}>
+         <Text>Hello {this.props.names}!</Text>
+       </Animated.View>
+     );
+   }
+ }
 
 class LotsOfGreetings extends Component {
   render() {
