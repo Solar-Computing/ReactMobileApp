@@ -12,17 +12,50 @@ import {
   View,
   Image
 } from 'react-native';
+import Swiper from 'react-native-swiper';
+
+var styles = StyleSheet.create({
+  wrapper: {
+  },
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9DD6EB',
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
+})
 
 class AwesomeProject extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
-        <LotsOfGreetings names='Aayush' />
-        <LotsOfGreetings names='Leonie' />
-        <LotsOfGreetings names='Sujeeth' />
-        <LotsOfGreetings names='Tommy' />
-      </View>
-    );
+      <Swiper style={styles.wrapper} showsButtons={false} loop={false}>
+        <View style={styles.slide1}>
+          <Text style={styles.text}>Hi Aayush!</Text>
+        </View>
+        <View style={styles.slide2}>
+          <Text style={styles.text}>Hi Leonie!</Text>
+        </View>
+        <View style={styles.slide3}>
+          <Text style={styles.text}>Hi Tom!</Text>
+        </View>
+      </Swiper>    );
   }
 }
 
