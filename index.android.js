@@ -14,20 +14,37 @@ import {
   ScrollView,
   Switch
 } from 'react-native';
+import axios from 'axios';
 var Accordion = require('react-native-accordion')
-var roomsData = [
-  {name: "Kitchen", sockets: [
-    {name: 'Lights', state: {switchIsOn: false}},
-    {name: 'Fridge', state: {switchIsOn: false}}]},
-  {name: "Living Room", sockets: [
-    {name: 'Light 1', state: {switchIsOn: true}},
-    {name: 'Light 2', state: {switchIsOn: true}}]}]
+/*var roomsData = [
+  {"name": "Kitchen", "sockets": [
+    {"name": "Lights", "state": {"switchIsOn": false}},
+    {"name": "Microwave", "state": {"switchIsOn": false}},
+    {"name": "Dishwasher", "state": {"switchIsOn": false}}
+    ]
+  },
+  {"name": "Living Room", "sockets": [
+    {"name": "Light 1", "state": {"switchIsOn": true}},
+    {"name": "Light 2", "state": {"switchIsOn": true}},
+    {"name": "Outlet 1", "state": {"switchIsOn": true}},
+    {"name": "Outlet 2", "state": {"switchIsOn": true}}
+    ]
+  },
+  {"name": "Bed Room", "sockets": [
+    {"name": "Outlet 1", "state": {"switchIsOn": true}},
+    {"name": "Outlet 2", "state": {"switchIsOn": true}},
+    {"name": "Heater", "state": {"switchIsOn": true}},
+    {"name": "Lights", "state": {"switchIsOn": true}}
+    ]
+  }
+  ]
+  */
 
 class AwesomeProject extends Component {
   render() {
     return (
       <ScrollView style={null}>
-        <ListOfRooms data={roomsData}></ListOfRooms>
+        <ListOfRooms data={{}}></ListOfRooms>
       </ScrollView>
     );
   }
@@ -41,6 +58,14 @@ class ListOfRooms extends Component {
       dataSource: ds.cloneWithRows(this.props.data),
     };
   }
+  componentDidMount() {
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    console.log("fetching...");
+    axios.get("http://jarvis.jarvisnet.ga:8165/test.php").done((loadedData) => {
+        console.log(JSON.parse(loadedData.request._response));
+        this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData.request._response))});
+    });
+  }
   render() {
     return (
       <ListView
@@ -49,6 +74,7 @@ class ListOfRooms extends Component {
       />
     );
   }
+  ///
   renderCollapsibleRow(rowData) {
     var header = (
       <View style={styles.headerView}>
@@ -59,7 +85,7 @@ class ListOfRooms extends Component {
     var content = (
       <RoomOptions data={rowData.sockets}></RoomOptions>
     );
- 
+ ///
     return (
       <Accordion
         header={header}
@@ -68,7 +94,7 @@ class ListOfRooms extends Component {
     );
   }
 }
-
+///
 class RoomOptions extends Component {
   constructor(props) {
     super(props);
@@ -84,6 +110,7 @@ class RoomOptions extends Component {
         />
       );
     }
+    ///
     renderOptionRow(rowData) {
       return (
         <View style={styles.contentView}>
@@ -93,7 +120,7 @@ class RoomOptions extends Component {
         );
     }
   }
-
+///
 class OnOffSwitch extends Component {
   constructor(props) {
     super(props)
