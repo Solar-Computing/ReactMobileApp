@@ -1,4 +1,4 @@
-package com.solarapp;
+package com.home;
 
 import com.facebook.react.ReactActivity;
 

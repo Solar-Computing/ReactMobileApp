@@ -2,64 +2,24 @@ import React, {Component} from 'react';
 import {
   AppRegistry,
   View,
-  Text,
-  StyleSheet,
-  Image
+  ScrollView
 } from 'react-native';
+import DataList from './layout/feed.js';
+import Navigation from './layout/navigation.js';
 
-class SolarApp extends Component {
+class Home extends Component {
   render() {
     return (
-        <View >
-            <View style={styles.navbar}>
-                <Image
-                    style={styles.navBarImage}
-                    source={require('./img/logo.png')}
-                />
+        <ScrollView>
+            <View>
+                <Navigation></Navigation>
             </View>
-            <View style={styles.statusbar}>
-                <Text style={styles.statusbarTitles}>
-                    Settings
-                </Text>
-                <Text style={styles.statusbarTitles}>
-                    Data
-                </Text>
-                <Text style={styles.statusbarTitles}>
-                    Feed
-                </Text>
-            </View>
-      </View>
+            <ScrollView>
+                <DataList></DataList>
+            </ScrollView>
+        </ScrollView>
     );
   }
 }
 
-const styles = StyleSheet.create({
-    navbar: {
-        backgroundColor: '#2c3239',
-        paddingTop: 20,
-        paddingBottom: 1,
-        justifyContent: 'center',
-        flexDirection: 'row'
-    },
-    navBarImage: {
-        width: 40,
-        height: 40,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    statusbar: {
-        backgroundColor: '#191f28',
-        paddingTop: 3,
-        paddingBottom: 3,
-        justifyContent: 'center',
-        flexDirection: 'row'
-    },
-    statusbarTitles: {
-        color: '#F5FCFF',
-        justifyContent: 'center',
-        paddingLeft: 40,
-        flex: 1
-    }
-});
-
-AppRegistry.registerComponent('SolarApp', () => SolarApp);
+AppRegistry.registerComponent('Home', () => Home);
