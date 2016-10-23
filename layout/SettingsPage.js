@@ -41,6 +41,7 @@ class ListOfRooms extends Component {
       <ListView
         dataSource={this.state.dataSource}
         renderRow={this.renderCollapsibleRow}
+        enableEmptySections={true}
       />
     );
   }
