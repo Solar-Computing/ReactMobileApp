@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Accordion from 'react-native-accordion';
 import axios from 'axios';
-import SettingsStyle from './SettingsStyle.js';
+import styles from './styles.js';
 
 class SettingsPage extends Component {
   render() {
@@ -48,8 +48,8 @@ class ListOfRooms extends Component {
   ///
   renderCollapsibleRow(rowData) {
     var header = (
-      <View style={SettingsStyle.headerView}>
-        <Text style={SettingsStyle.headerText}>{rowData.name}</Text>
+      <View style={styles.headerView}>
+        <Text style={styles.headerText}>{rowData.name}</Text>
       </View>
     );
 
@@ -84,8 +84,8 @@ class RoomOptions extends Component {
     ///
     renderOptionRow(rowData) {
       return (
-        <View style={SettingsStyle.contentView}>
-          <View><Text style={SettingsStyle.contentText}>{rowData.name}</Text></View>
+        <View style={styles.contentView}>
+          <View><Text style={styles.contentText}>{rowData.name}</Text></View>
           <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}><OnOffSwitch state={rowData.state}></OnOffSwitch></View>
         </View>
         );

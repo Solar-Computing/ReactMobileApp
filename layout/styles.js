@@ -8,21 +8,21 @@ export default StyleSheet.create({
     */
     navbar: {
         backgroundColor: '#2c3239',
-        paddingTop: 20,
-        paddingBottom: 1,
+        paddingTop:20,
+        paddingBottom: 2,
         justifyContent: 'center',
         flexDirection: 'row'
     },
     navBarImage: {
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center'
     },
     statusbar: {
         backgroundColor: '#191f28',
-        paddingTop: 3,
-        paddingBottom: 3,
+        paddingTop: 10,
+        paddingBottom: 10,
         justifyContent: 'center',
         flexDirection: 'row'
     },
@@ -56,5 +56,27 @@ export default StyleSheet.create({
         width: 60,
         marginRight: 8,
         resizeMode: 'contain'
-    }
+    },
+
+    /*
+    *   Settings
+    */
+    headerText: {
+        fontSize: 25,
+        fontWeight: 'bold'
+    },
+    headerView: {
+        alignItems: 'center',
+        padding: 25,
+        backgroundColor: '#e5e5ff',
+    },
+    contentText: {
+        padding: 20,
+        fontSize: 20,
+    },
+    contentView: {
+        backgroundColor: '#FFFFFF',
+        flex: 1,
+        flexDirection: 'row',
+    },
 });
