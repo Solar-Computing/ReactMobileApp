@@ -22,9 +22,9 @@ var styles = StyleSheet.create({
   },
   slide2: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // backgroundColor: '#97CAE5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
   },
   slide3: {
     flex: 1,
@@ -43,24 +43,24 @@ var styles = StyleSheet.create({
 class Home extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper} showsButtons={true} loop={false}>
-        <View style={styles.slide1}>
-          <SettingsPage></SettingsPage>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>And simple</Text>
-        </View>
-        <View style={styles.slide3}>
-          <ScrollView>
-              <View>
-                  <Navigation></Navigation>
-              </View>
-              <ScrollView>
-                  <DataList></DataList>
-              </ScrollView>
-          </ScrollView>
-        </View>
-      </Swiper>
+      <View>
+        <Navigation></Navigation>
+        <Swiper style={styles.wrapper} loop={false}>
+          <View style={styles.slide1}>
+            <SettingsPage></SettingsPage>
+          </View>
+          <View style={styles.slide2}>
+            <Text style={styles.text}>Sujeeth's Page</Text>
+          </View>
+          <View style={styles.slide3}>
+            <ScrollView>
+                <ScrollView>
+                    <DataList></DataList>
+                </ScrollView>
+            </ScrollView>
+          </View>
+        </Swiper>
+      </View>
 
     );
   }
