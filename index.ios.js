@@ -98,11 +98,6 @@ class AwesomeProject extends Component {
       />
         
          <Player/>
-        
-        <FadeInView names='Aayush' />
-        <FadeInView names='Leonie' />
-        <FadeInView names='Sujeeth' />
-        <FadeInView names='Tommy' />
       </View>
     );
   }

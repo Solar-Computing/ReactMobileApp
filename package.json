@@ -6,7 +6,12 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react": "15.3.1",
-    "react-native": "0.32.1"
+    "react": "15.3.2",
+    "react-chartist": "^0.10.2",
+    "react-dom": "^15.3.2",
+    "react-native": "^0.35.0",
+    "react-native-chart": "^1.0.8-beta",
+    "react-native-charts": "^3.0.0",
+    "react-native-svg": "^4.3.1"
   }
 }

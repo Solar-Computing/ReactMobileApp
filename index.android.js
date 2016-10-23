@@ -5,7 +5,6 @@
 //  */
 
 // import React, { Component } from 'react';
-import { Switch } from 'react-native'
 // import {
 //   AppRegistry,
 //   StyleSheet,
@@ -78,35 +77,50 @@ import {
   Image,
   TouchableHighlight,
   Dimensions,
-  Animated
+  Animated,
+  Switch
 } from 'react-native';
+
+import { BarChart } from 'react-native-charts'
+
+import Chart from 'react-native-chart';
 
 class AwesomeProject extends Component {
   render() {
     return (
       <View style={{alignItems: 'center'}}>
-        
-        <Switch
-        value={(this.state && this.state.switchValue) || false}
-        onValueChange={(value) => {
-          this.setState({switchValue: value})
-        }}
-        // Color props are iOS-only
-        // thumbTintColor={'white'} // Removes shadow
-        tintColor={"rgba(230,230,230,1)"}
-        onTintColor={"rgba(68,219,94,1)"}
-      />
-        
-         <Player/>
-        
-        <FadeInView names='Aayush' />
-        <FadeInView names='Leonie' />
-        <FadeInView names='Sujeeth' />
-        <FadeInView names='Tommy' />
+
+      <SimpleChart/>
+
+      <Player/>
+
       </View>
     );
   }
 }
+ 
+const data = [
+    [0, 1],
+    [1, 3],
+    [3, 7],
+    [4, 9],
+];
+ 
+class SimpleChart extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Chart
+                    style={styles.chart}
+                    data={data}
+                    verticalGridStep={5}
+                    type="bar"
+                 />
+            </View>
+        );
+    }
+}
+
 
 class Player extends Component {
   constructor () {
@@ -158,9 +172,11 @@ class Player extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    marginTop: 6
-  },
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
   // Item
   item: {
     flexDirection: 'column',
@@ -241,8 +257,11 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     height: 28,
     textAlign: 'center'
-  }
-
+  },
+  chart: {
+        width: 200,
+        height: 200,
+    }
 })
 
 class FadeInView extends React.Component {
