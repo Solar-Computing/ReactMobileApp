@@ -82,91 +82,94 @@ import {
 } from 'react-native';
 
 import { BarChart } from 'react-native-charts'
-import Chart from 'react-native-chart';
-import GraphPage from './GraphPage.js'
 
-class AwesomeProject extends Component {
+import Chart from 'react-native-chart';
+import graphStyles from './graphStyles.js';
+
+class GraphPage extends Component {
   render() {
     return (
       <View style={{alignItems: 'center'}}>
 
-      <GraphPage></GraphPage>
+      <SimpleChart/>
+
+      <Player/>
 
       </View>
     );
   }
 }
  
-// const data = [
-//     [0, 1],
-//     [1, 3],
-//     [3, 7],
-//     [4, 9],
-// ];
+const data = [
+    [0, 1],
+    [1, 3],
+    [3, 7],
+    [4, 9],
+];
  
-// class SimpleChart extends Component {
-//     render() {
-//         return (
-//             <View style={styles.container}>
-//                 <Chart
-//                     style={styles.chart}
-//                     data={data}
-//                     verticalGridStep={5}
-//                     type="bar"
-//                  />
-//             </View>
-//         );
-//     }
-// }
+class SimpleChart extends Component {
+    render() {
+        return (
+            <View style={graphStyles.container}>
+                <Chart
+                    style={graphStyles.chart}
+                    data={data}
+                    verticalGridStep={5}
+                    type="bar"
+                 />
+            </View>
+        );
+    }
+}
 
 
-// class Player extends Component {
-//   constructor () {
-//     super()
-//     const width = {pts: 300, ast: 200, reb: 100}
-//     this.state = {
-//       pts: new Animated.Value(width.pts),
-//       ast: new Animated.Value(width.ast),
-//       reb: new Animated.Value(width.reb),
-//       fadeAnim: new Animated.Value(0)
-//     }
-//   }
+class Player extends Component {
+  constructor () {
+    super()
+    const width = {pts: 300, ast: 200, reb: 100}
+    this.state = {
+      pts: new Animated.Value(width.pts),
+      ast: new Animated.Value(width.ast),
+      reb: new Animated.Value(width.reb),
+      fadeAnim: new Animated.Value(0)
+    }
+  }
   
-//   componentDidMount() {
-//      Animated.timing(          // Uses easing functions
-//        this.state.fadeAnim,    // The value to drive
-//        {toValue: 1}            // Configuration
-//      ).start();                // Don't forget start!
-//    }
+  componentDidMount() {
+     Animated.timing(          // Uses easing functions
+       this.state.fadeAnim,    // The value to drive
+       {toValue: 1}            // Configuration
+     ).start();                // Don't forget start!
+   }
   
-//   handeleAnimation () {
-//     const timing = Animated.timing
-//     const width = {pts: 30, ast: 20, reb: 10}
-//     const indicators = ['pts', 'ast', 'reb']
-//     Animated.parallel(indicators.map(item => {
-//       return timing(this.state[item], {toValue: width[item]})
-//     })).start()
-//   }
+  handeleAnimation () {
+    const timing = Animated.timing
+    const width = {pts: 30, ast: 20, reb: 10}
+    const indicators = ['pts', 'ast', 'reb']
+    Animated.parallel(indicators.map(item => {
+      return timing(this.state[item], {toValue: width[item]})
+    })).start()
+  }
   
-//   render () {
-//    const {pts, ast, reb, stl, blk, tov, min} = this.state
+  render () {
+   const {pts, ast, reb, stl, blk, tov, min} = this.state
   
-//    return (
-//       <View>
-//        {pts &&
-//           <Animated.View style={[styles.bar, styles.points, {width: pts}]} />
-//         }
-//         {ast &&
-//           <Animated.View style={[styles.bar, styles.assists, {width: ast}]} />
-//         }
-//         {reb &&
-//           <Animated.View style={[styles.bar, styles.rebounds, {width: reb}]} />
-//         }
-//         <Text onPress={this.handeleAnimation.bind(this)}>Button</Text>
-//       </View>
-//    )
-//   }
-// }
+   return (
+      <View>
+       {pts &&
+          <Animated.View style={[graphStyles.bar, graphStyles.points, {width: pts}]} />
+        }
+        {ast &&
+          <Animated.View style={[graphStyles.bar, graphStyles.assists, {width: ast}]} />
+        }
+        {reb &&
+          <Animated.View style={[graphStyles.bar, graphStyles.rebounds, {width: reb}]} />
+        }
+        <Text onPress={this.handeleAnimation.bind(this)}>Button</Text>
+      </View>
+   )
+  }
+}
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -262,41 +265,41 @@ class AwesomeProject extends Component {
 //     }
 // })
 
-// class FadeInView extends React.Component {
-//    constructor(props) {
-//      super(props);
-//      this.state = {
-//        fadeAnim: new Animated.Value(0), // init opacity 0
-//      };
-//    }
-//    componentDidMount() {
-//      Animated.timing(          // Uses easing functions
-//        this.state.fadeAnim,    // The value to drive
-//        {toValue: 1}            // Configuration
-//      ).start();                // Don't forget start!
-//    }
-//    render() {
-//      return (
-//        <Animated.View          // Special animatable View
-//          style={{opacity: this.state.fadeAnim}}>
-//          <Text>Hello {this.props.names}!</Text>
-//        </Animated.View>
-//      );
-//    }
-//  }
+class FadeInView extends React.Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+       fadeAnim: new Animated.Value(0), // init opacity 0
+     };
+   }
+   componentDidMount() {
+     Animated.timing(          // Uses easing functions
+       this.state.fadeAnim,    // The value to drive
+       {toValue: 1}            // Configuration
+     ).start();                // Don't forget start!
+   }
+   render() {
+     return (
+       <Animated.View          // Special animatable View
+         style={{opacity: this.state.fadeAnim}}>
+         <Text>Hello {this.props.names}!</Text>
+       </Animated.View>
+     );
+   }
+ }
 
-// class LotsOfGreetings extends Component {
-//   render() {
-// //     let pic = {
-// //       uri: 'http://frostney.github.io/talks/react-native/slides/images/meme2.jpg'
-// //       uri: 'http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
-// //     };
-//     return (
-// //       <Image source={pic} style={{width: 193, height: 11}}/>
-//       <Text>Hello {this.props.names}!</Text>
-//     );
-//   }
-// }
+class LotsOfGreetings extends Component {
+  render() {
+//     let pic = {
+//       uri: 'http://frostney.github.io/talks/react-native/slides/images/meme2.jpg'
+//       uri: 'http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
+//     };
+    return (
+//       <Image source={pic} style={{width: 193, height: 11}}/>
+      <Text>Hello {this.props.names}!</Text>
+    );
+  }
+}
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -317,4 +320,6 @@ class AwesomeProject extends Component {
 //   },
 // });
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+// AppRegistry.registerComponent('GraphPage', () => GraphPage);
+
+export default GraphPage;
