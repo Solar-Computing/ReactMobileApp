@@ -4,7 +4,7 @@ import {
   Text,
   Image
 } from 'react-native';
-import styles from './styles.js';
+import styles from './navigation_style.js';
 
 class Navigation extends Component {
     render() {

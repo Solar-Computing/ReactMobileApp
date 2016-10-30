@@ -3,9 +3,10 @@ import {
   View,
   Text,
   Image,
-  ListView
+  ListView,
+  ScrollView
 } from 'react-native';
-import styles from './styles.js';
+import styles from './feed_style.js';
 
 
 var API_URL = 'https://itunes.apple.com/search';
@@ -13,9 +14,6 @@ var LOADING = {};
 var resultsCache = {
     dataForQuery: {}
 };
-/*var MOCKED_DATA = [
-  {title: 'Cool Title', content: "Awesome Content"},
-];*/
 
 class DataList extends Component {
     constructor() {
@@ -26,27 +24,19 @@ class DataList extends Component {
             query: '',
             resultsData: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 != row2,})
         };
-
-        var searchString = "harry potter";
-        this.searchApi(searchString);
     }
     render() {
       return(
+          <ScrollView>
           <ListView
             dataSource={this.state.resultsData}
             renderRow={this.renderRow}
             renderSeperator={this.renderSeperator}
             automaticallyAdjustContentInsets={false}
           />
+          </ScrollView>
       );
   }
-  getInitialState() {
-        return {
-            isLoading: false,
-            query: '',
-            resultsData: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 != row2,})
-        };
-    }
 
   renderSeperator(
       sectionID: number | string,
@@ -130,12 +120,10 @@ class DataList extends Component {
             .then((responseData) => {
                 LOADING[query] = false;
                 resultsCache.dataForQuery[query] = responseData.results;
-
                 this.setState({
                     isLoading: false,
                     resultsData: this.getDataSource(resultsCache.dataForQuery[query])
                 });
-                //AlertIOS.alert("Num", responseData.resultCount.toString(), 'res');
             })
           ;
       }
