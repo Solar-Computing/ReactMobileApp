@@ -7,7 +7,6 @@ import {
   Switch
 } from 'react-native';
 import Accordion from 'react-native-accordion';
-import axios from 'axios';
 import styles from './styles.js';
 
 class SettingsPage extends Component {
@@ -31,9 +30,11 @@ class ListOfRooms extends Component {
   componentDidMount() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     console.log("fetching...");
-    axios.get("http://jarvis.jarvisnet.ga:8165/test.php").done((loadedData) => {
-        console.log(JSON.parse(loadedData.request._response));
-        this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData.request._response))});
+    fetch("http://jarvis.jarvisnet.ga:8165/test.php").then((loadedData) => {
+        console.log(loadedData._bodyInit);
+        this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
+    }).catch((error) => {
+      console.log("Error..." + error);
     });
   }
   render() {
