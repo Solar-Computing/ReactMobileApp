@@ -301,6 +301,55 @@ class LotsOfGreetings extends Component {
   }
 }
 
+
+
+class ListOfRooms extends Component {
+  constructor(props) {
+    super(props);
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows(this.props.data),
+    };
+  }
+  componentDidMount() {
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    console.log("fetching...");
+    axios.get("http://jarvis.jarvisnet.ga:8165/test.php").done((loadedData) => {
+        console.log(JSON.parse(loadedData.request._response));
+        this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData.request._response))});
+    });
+  }
+  render() {
+    return (
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderCollapsibleRow}
+        enableEmptySections={true}
+      />
+    );
+  }
+  ///
+  renderCollapsibleRow(rowData) {
+    var header = (
+      <View style={styles.headerView}>
+        <Text style={styles.headerText}>{rowData.name}</Text>
+      </View>
+    );
+
+    var content = (
+      <RoomOptions data={rowData.sockets}></RoomOptions>
+    );
+ ///
+    return (
+      <Accordion
+        header={header}
+        content={content}
+      />
+    );
+  }
+}
+
+
 // const styles = StyleSheet.create({
 //   container: {
 //     flex: 1,

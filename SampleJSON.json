@@ -1,0 +1,1740 @@
+{
+  "Data": {
+    "Year": {
+      "January": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "February": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "March": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "April": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "May": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "June": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "July": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "August": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "September": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "October": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "November": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "December": {
+        "Monthly Average": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Day 1": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 2": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 3": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 4": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 5": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 6": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 7": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 8": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 9": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 10": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 11": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 12": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 13": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 14": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 15": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 16": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 17": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 18": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 19": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 20": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 21": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 22": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 23": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 24": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 25": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 26": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 27": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 28": {
+            "Consumed": "value",
+            "Produced": "value"},
+        "Day 29": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 30": {
+            "Consumed": "value",
+            "Produced": "value"
+        },
+        "Day 31": {
+            "Consumed": "value",
+            "Produced": "value"
+        }
+      },
+      "Weekly Averages": {
+        "Week 1": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 2": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 3": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 4": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 5": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 6": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 7": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 8": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 9": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 10": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 11": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 12": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 13": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 14": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 15": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 16": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 17": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 18": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 19": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 20": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 21": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 22": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 23": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 24": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 25": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 26": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 27": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 28": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 29": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 30": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 31": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 32": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 33": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 34": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 35": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 36": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 37": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 38": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 39": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 40": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 41": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 42": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 43": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 44": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 45": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 46": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 47": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 48": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 49": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 50": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 51": {
+          "Consumed": "value",
+          "Produced": "value"
+        },
+        "Week 52": {
+          "Consumed": "value",
+          "Produced": "value"
+        }
+      }
+    }
+  }
+}
