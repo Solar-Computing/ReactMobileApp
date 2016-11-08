@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView
 } from 'react-native';
-import App from './App.js';
+import App from './app.js';
 
 class Home extends Component {
   render() {
