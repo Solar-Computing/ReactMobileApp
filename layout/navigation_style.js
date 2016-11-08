@@ -29,5 +29,12 @@ export default StyleSheet.create({
         //paddingLeft: 40,
         textAlign: 'center',
         flex: 1
+    },
+    statusbarButton: {
+        // color: '#F5FCFF',
+        justifyContent: 'center',
+        // paddingLeft: 40,
+        textAlign: 'center',
+        flex: 1
     }
 });
