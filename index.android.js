@@ -9,7 +9,7 @@ import {
 import DataList from './layout/feed.js';
 import Navigation from './layout/navigation.js';
 import Swiper from 'react-native-swiper';
-import SettingsPage from './layout/SettingsPage.js';
+import SettingsPage from './layout/settingsPage.js';
 import styles from './layout/styles.js';
 
 class Home extends Component {
