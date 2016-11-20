@@ -27,18 +27,17 @@ class DataList extends Component {
     }
     render() {
       return(
-          <ScrollView>
+
           <ListView
             dataSource={this.state.resultsData}
             renderRow={this.renderRow}
-            renderSeperator={this.renderSeperator}
+            renderSeparator={this.renderSeparator}
             automaticallyAdjustContentInsets={false}
           />
-          </ScrollView>
       );
   }
 
-  renderSeperator(
+  renderSeparator(
       sectionID: number | string,
       rowID: number | string,
       adjacentRowHighlighted: boolean

@@ -7,14 +7,85 @@ import {
   Switch
 } from 'react-native';
 import Accordion from 'react-native-accordion';
+import InfiniteScrollView from 'react-native-infinite-scroll-view'
 import styles from './settings_style.js';
+
+// myData = [
+//   {name: "Kitchen", sockets: [
+//     {name: "Lights", state: {switchIsOn: false}},
+//     {name: "Microwave", state: {switchIsOn: false}},
+//     {name: "Dishwasher", state: {switchIsOn: false}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Bed Room", sockets: [
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}},
+//     {name: "Heater", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}},
+//     {name: "Lights", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   },
+//   {name: "Living Room", sockets: [
+//     {name: "Light 1", state: {switchIsOn: true}},
+//     {name: "Light 2", state: {switchIsOn: true}},
+//     {name: "Outlet 1", state: {switchIsOn: true}},
+//     {name: "Outlet 2", state: {switchIsOn: true}}
+//     ]
+//   }
+// ]
+
 
 class SettingsPage extends Component {
   render() {
     return (
-      <ScrollView style={null}>
-        <ListOfRooms data={{}}></ListOfRooms>
-      </ScrollView>
+      <ListOfRooms data={{}}></ListOfRooms>
     );
   }
 }
@@ -31,7 +102,6 @@ class ListOfRooms extends Component {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     console.log("fetching...");
     fetch("http://jarvis.jarvisnet.ga:8165/test.php").then((loadedData) => {
-        console.log(loadedData._bodyInit);
         this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
     }).catch((error) => {
       console.log("Error..." + error);
@@ -74,24 +144,25 @@ class RoomOptions extends Component {
     this.state = {
       dataSource: ds.cloneWithRows(this.props.data),
     };
-  } render() {
+  }
+  render() {
     return (
       <ListView
         dataSource={this.state.dataSource}
         renderRow={this.renderOptionRow}
-        />
-      );
-    }
-    ///
-    renderOptionRow(rowData) {
-      return (
-        <View style={styles.contentView}>
-          <View><Text style={styles.contentText}>{rowData.name}</Text></View>
-          <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}><OnOffSwitch state={rowData.state}></OnOffSwitch></View>
-        </View>
-        );
-    }
+      />
+    );
   }
+    ///
+  renderOptionRow(rowData) {
+    return (
+      <View style={styles.contentView}>
+        <View><Text style={styles.contentText}>{rowData.name}</Text></View>
+        <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}><OnOffSwitch state={rowData.state}></OnOffSwitch></View>
+      </View>
+    );
+  }
+}
 ///
 class OnOffSwitch extends Component {
   constructor(props) {
@@ -102,11 +173,12 @@ class OnOffSwitch extends Component {
     return (
       <View>
         <Switch
-          onValueChange={(value) => this.setState({switchIsOn: value})}
+          onValueChange={(value) => {this.setState({switchIsOn: value});
+                                      console.log(this.state);}}
           value={this.state.switchIsOn}
         />
       </View>
-          );
+    );
   }
 }
 
