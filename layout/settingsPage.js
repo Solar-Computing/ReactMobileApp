@@ -11,6 +11,7 @@ import InfiniteScrollView from 'react-native-infinite-scroll-view'
 import styles from './settings_style.js';
 
 // myData = [
+//   {name: "General", }
 //   {name: "Kitchen", sockets: [
 //     {name: "Lights", state: {switchIsOn: false}},
 //     {name: "Microwave", state: {switchIsOn: false}},
@@ -35,48 +36,6 @@ import styles from './settings_style.js';
 //     {name: "Lights", state: {switchIsOn: true}},
 //     {name: "Lights", state: {switchIsOn: true}},
 //     {name: "Lights", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
-//     ]
-//   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
 //     ]
 //   }
 // ]
