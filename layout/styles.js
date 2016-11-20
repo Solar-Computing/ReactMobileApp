@@ -18,6 +18,7 @@ export default StyleSheet.create({
     },
     slide3: {
       flex: 1,
+      paddingBottom: 130
     },
     text: {
       color: '#fff',
