@@ -6,6 +6,7 @@ import {
   ListView,
   ScrollView
 } from 'react-native';
+import Accordion from 'react-native-accordion';
 import styles from './feed_style.js';
 
 
@@ -18,7 +19,6 @@ var resultsCache = {
 class DataList extends Component {
     constructor() {
         super();
-
         this.state ={
             isLoading: false,
             query: '',
@@ -61,10 +61,24 @@ class DataList extends Component {
          <View>
             <View style={styles.cellContainer}>
                 <Image
-                    source={{uri: data.artworkUrl100}}
+                    source={require('./img/row.jpg')}
                     style={styles.cellImage}
                 />
-                <Text>{data.trackName}</Text>
+                <Text>{}</Text>
+            </View>
+            <View style={styles.cellContainer}>
+                <Image
+                    source={require('./img/row2.jpg')}
+                    style={styles.cellImage}
+                />
+                <Text>{}</Text>
+            </View>
+            <View style={styles.cellContainer}>
+                <Image
+                    source={require('./img/row3.jpg')}
+                    style={styles.cellImage}
+                />
+                <Text>{}</Text>
             </View>
          </View>
      );
@@ -134,6 +148,7 @@ class DataList extends Component {
       } else {
           return API_URL + '?media=movie&term=mission+impossible';
       }
+      //return "http://jarvis.jarvisnet.ga:8165/test_leonie.php";
   }
 }
 

@@ -15,11 +15,11 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#FFF',
-        padding: 4
+        padding: 0
     },
     cellImage: {
         height: 80,
-        width: 60,
+        width: 260,
         marginRight: 8,
         resizeMode: 'contain'
     }
