@@ -7,7 +7,6 @@ import {
   Switch
 } from 'react-native';
 import Accordion from 'react-native-accordion';
-import InfiniteScrollView from 'react-native-infinite-scroll-view'
 import styles from './settings_style.js';
 
 // myData = [
@@ -63,7 +62,7 @@ class ListOfRooms extends Component {
     fetch("http://jarvis.jarvisnet.ga:8165/test.php").then((loadedData) => {
         this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
     }).catch((error) => {
-      console.log("Error..." + error);
+      console.log("Error... " + error);
     });
   }
   render() {
