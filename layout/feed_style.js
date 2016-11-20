@@ -15,8 +15,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#FFF',
-        padding: 2,
-        margin: 1
+        margin: 0.5,
     },
     cellImage: {
         height: 80,
@@ -24,5 +23,8 @@ export default StyleSheet.create({
         marginRight: 8,
         marginLeft: 8,
         resizeMode: 'contain'
+    },
+    cellText: {
+        flex: 1
     }
 });

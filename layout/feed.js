@@ -95,7 +95,7 @@ class DataList extends Component {
                 source={showImage}
                 style={styles.cellImage}
             />
-            <Text>{data.message}</Text>
+            <Text style={styles.cellText}>{data.message}</Text>
         </View>
     );
   }
