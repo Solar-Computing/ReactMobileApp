@@ -9,35 +9,33 @@ import {
 import Accordion from 'react-native-accordion';
 import styles from './feed_style.js';
 
-
-var API_URL = 'https://itunes.apple.com/search';
-var LOADING = {};
-var resultsCache = {
-    dataForQuery: {}
-};
-
 class DataList extends Component {
-    constructor() {
-        super();
-        this.state ={
-            isLoading: false,
-            query: '',
-            resultsData: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 != row2,})
-        };
-    }
-    render() {
-      return(
-
-          <ListView
-            dataSource={this.state.resultsData}
-            renderRow={this.renderRow}
-            renderSeparator={this.renderSeparator}
-            automaticallyAdjustContentInsets={false}
-          />
-      );
+  constructor() {
+    super();
+    this.state ={
+        resultsData: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 != row2,})
+    };
+  }
+  componentDidMount() {
+    this.searchApi();
   }
 
-  renderSeparator(
+  getDataSource (dataItems: Array<any>): ListView.DataSource {
+        return this.state.resultsData.cloneWithRows(dataItems);
+  }
+
+  searchApi() {
+      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+      console.log("Fetching update data");
+      fetch("http://jarvis.jarvisnet.ga:8165/test_leonie.php").then((loadedData) => {
+          console.log(loadedData._bodyInit);
+          this.setState({resultsData: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
+      }).catch((error) => {
+        console.log("Error when fetching update data: " + error);
+      });
+  }
+
+  renderSeperator(
       sectionID: number | string,
       rowID: number | string,
       adjacentRowHighlighted: boolean
@@ -50,104 +48,56 @@ class DataList extends Component {
       );
   }
 
+  render() {
+    return (
+    <ScrollView>
+      <ListView
+        dataSource={this.state.resultsData}
+        renderRow={this.renderRow}
+        renderSeperator={this.renderSeperator}
+        automaticallyAdjustContentInsets={false}
+      />
+      </ScrollView>
+    );
+  }
+
   renderRow(
       data: Object,
       sectionID: number | string,
       rowID: number | string,
       highlightRowFunction: (sectionID: ?number | string, rowID: ?number | string) => void
   ) {
-     return (
-         <View>
-            <View style={styles.cellContainer}>
-                <Image
-                    source={require('./img/row.jpg')}
-                    style={styles.cellImage}
-                />
-                <Text>{}</Text>
-            </View>
-            <View style={styles.cellContainer}>
-                <Image
-                    source={require('./img/row2.jpg')}
-                    style={styles.cellImage}
-                />
-                <Text>{}</Text>
-            </View>
-            <View style={styles.cellContainer}>
-                <Image
-                    source={require('./img/row3.jpg')}
-                    style={styles.cellImage}
-                />
-                <Text>{}</Text>
-            </View>
-         </View>
-     );
-  }
-
-  getDataSource (dataItems: Array<any>): ListView.DataSource {
-      return this.state.resultsData.cloneWithRows(dataItems);
-  }
-
-  componentDidMount () {
-      this.searchApi('harry potter');
-  }
-
-  searchApi(query: string) {
-
-      this.setState({ query: query});
-
-      var cachedResultsForQuery = resultsCache.dataForQuery[query];
-      if (cachedResultsForQuery) {
-          if (!LOADING[query]) {
-              this.setState({
-                  isLoading: false,
-                  resultsData: this.getDataSource(cachedResultsForQuery)
-              });
-              //return cachedResultsForQuery;
-          } else {
-              this.setState({
-                  isLoading: true
-              });
-          }
-      } else {
-          var queryURL = this._urlForQuery(query);
-
-          if(!queryURL) return;
-
-          this.setState({
-              isLoading: true
-          });
-
-          LOADING[query] = true;
-          resultsCache.dataForQuery[query] = null;
-          fetch(this._urlForQuery(query))
-            .then((response) => response.json())
-            .catch((error) => {
-                LOADING[query] = false;
-                resultsCache.dataForQuery[query] = undefined;
-                this.setState({
-                    isLoading: false,
-                    resultsData: this.getDataSource([])
-                });
-
-            })
-            .then((responseData) => {
-                LOADING[query] = false;
-                resultsCache.dataForQuery[query] = responseData.results;
-                this.setState({
-                    isLoading: false,
-                    resultsData: this.getDataSource(resultsCache.dataForQuery[query])
-                });
-            })
-          ;
-      }
-  }
-  _urlForQuery(query: string): string {
-      if (query) {
-          return API_URL + '?media=movie&term=' + encodeURIComponent(query);
-      } else {
-          return API_URL + '?media=movie&term=mission+impossible';
-      }
-      //return "http://jarvis.jarvisnet.ga:8165/test_leonie.php";
+    var imgGoal = require("./img/goal.png");
+    var imgLogo = require("./img/logo.png");
+    var imgLightBulb = require("./img/light-bulb.png");
+    var imgMegaphone = require("./img/megaphone.png");
+    var imgTarget = require("./img/target.png");
+    var imgTrophy = require("./img/trophy.png");
+    var showImage = imgLightBulb;
+    if (data.category == "logo") {
+        showImage = imgLogo;
+    }
+    if (data.category == "goal") {
+        showImage = imgGoal;
+    }
+    if (data.category == "trophy") {
+        showImage = imgTrophy;
+    }
+    if (data.category == "target") {
+        showImage = imgTarget;
+    }
+    if (data.category == "light-bulb") {
+        showImage = imgLightBulb;
+    }
+    return (
+        <View style={styles.cellContainer}>
+            <Image
+                source={showImage}
+                style={styles.cellImage}
+            />
+            <Text>{data.message}</Text>
+        </View>
+    );
   }
 }
 

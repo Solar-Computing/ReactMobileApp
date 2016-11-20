@@ -15,12 +15,14 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#FFF',
-        padding: 0
+        padding: 2,
+        margin: 1
     },
     cellImage: {
         height: 80,
-        width: 260,
+        width: 60,
         marginRight: 8,
+        marginLeft: 8,
         resizeMode: 'contain'
     }
 });
