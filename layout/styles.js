@@ -8,7 +8,7 @@ export default StyleSheet.create({
     },
     slide1: {
       flex: 1,
-      paddingBottom: 135
+      paddingBottom: 130
     },
     slide2: {
       flex: 1,
