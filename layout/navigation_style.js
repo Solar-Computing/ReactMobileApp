@@ -24,7 +24,7 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     statusbarTitles: {
-        color: '#F5FCFF',
+        color: '#7f7fff',
         justifyContent: 'center',
         //paddingLeft: 40,
         textAlign: 'center',

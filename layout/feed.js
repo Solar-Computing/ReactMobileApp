@@ -28,7 +28,6 @@ class DataList extends Component {
       const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
       console.log("Fetching update data");
       fetch("http://jarvis.jarvisnet.ga:8165/test_leonie.php").then((loadedData) => {
-          console.log(loadedData._bodyInit);
           this.setState({resultsData: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
       }).catch((error) => {
         console.log("Error when fetching update data: " + error);

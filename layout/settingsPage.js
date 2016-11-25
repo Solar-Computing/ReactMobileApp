@@ -8,33 +8,43 @@ import {
 } from 'react-native';
 import Accordion from 'react-native-accordion';
 import styles from './settings_style.js';
+import { MySlider, OnOffSwitch } from './settingsOptionsComponents.js';
+
+const optionComponents = {
+  switch: OnOffSwitch,
+  picker: MySlider
+};
 
 // myData = [
-//   {name: "General", }
-//   {name: "Kitchen", sockets: [
-//     {name: "Lights", state: {switchIsOn: false}},
-//     {name: "Microwave", state: {switchIsOn: false}},
-//     {name: "Dishwasher", state: {switchIsOn: false}}
+//   {"name": "General", "options": [
+//     {"name": "Temperature", "optionType": "slider", "state": {"range": "100"}},
+//     {"name": "Microwave", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Dishwasher", "optionType": "switch", "state": {"switchIsOn": false}}
+//     ]
+//   {"name": "Kitchen", "options": [
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Microwave", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Dishwasher", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
 //   },
-//   {name: "Living Room", sockets: [
-//     {name: "Light 1", state: {switchIsOn: true}},
-//     {name: "Light 2", state: {switchIsOn: true}},
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}}
+//   {"name": "Living Room", "options": [
+//     {"name": "Light 1", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Light 2", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": true}}
 //     ]
 //   },
-//   {name: "Bed Room", sockets: [
-//     {name: "Outlet 1", state: {switchIsOn: true}},
-//     {name: "Outlet 2", state: {switchIsOn: true}},
-//     {name: "Heater", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}},
-//     {name: "Lights", state: {switchIsOn: true}}
+//   {"name": "Bed Room", "options": [
+//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Heater", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}}
 //     ]
 //   }
 // ]
@@ -83,7 +93,7 @@ class ListOfRooms extends Component {
     );
 
     var content = (
-      <RoomOptions data={rowData.sockets}></RoomOptions>
+      <RoomOptions data={rowData.options}></RoomOptions>
     );
  ///
     return (
@@ -113,31 +123,19 @@ class RoomOptions extends Component {
   }
     ///
   renderOptionRow(rowData) {
+    const SpecificType = optionComponents[rowData.optionType];
     return (
       <View style={styles.contentView}>
-        <View><Text style={styles.contentText}>{rowData.name}</Text></View>
-        <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}><OnOffSwitch state={rowData.state}></OnOffSwitch></View>
+        <View>
+          <Text style={styles.contentText}>{rowData.name}</Text>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}>
+          <SpecificType state={rowData.state}></SpecificType>
+        </View>
       </View>
     );
   }
 }
 ///
-class OnOffSwitch extends Component {
-  constructor(props) {
-    super(props)
-    this.state = this.props.state
-  }
-  render() {
-    return (
-      <View>
-        <Switch
-          onValueChange={(value) => {this.setState({switchIsOn: value});
-                                      console.log(this.state);}}
-          value={this.state.switchIsOn}
-        />
-      </View>
-    );
-  }
-}
 
 export default SettingsPage;
