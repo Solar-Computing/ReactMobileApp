@@ -12,12 +12,12 @@ import { MySlider, OnOffSwitch } from './settingsOptionsComponents.js';
 
 const optionComponents = {
   switch: OnOffSwitch,
-  picker: MySlider
+  slider: MySlider
 };
 
 // myData = [
 //   {"name": "General", "options": [
-//     {"name": "Temperature", "optionType": "slider", "state": {"range": "100"}},
+//     {"name": "Temperature", "optionType": "slider", "state": {"minimum": "20", "maximum":"120"}},
 //     {"name": "Microwave", "optionType": "switch", "state": {"switchIsOn": false}},
 //     {"name": "Dishwasher", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
@@ -129,9 +129,7 @@ class RoomOptions extends Component {
         <View>
           <Text style={styles.contentText}>{rowData.name}</Text>
         </View>
-        <View style={{flex: 1, flexDirection: 'row', padding: 20, justifyContent: 'flex-end'}}>
-          <SpecificType state={rowData.state}></SpecificType>
-        </View>
+        <SpecificType state={rowData.state}></SpecificType>
       </View>
     );
   }

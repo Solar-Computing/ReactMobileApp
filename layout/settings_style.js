@@ -17,16 +17,25 @@ export default StyleSheet.create({
         borderColor: '#FFFFFF',
     },
     contentText: {
-        padding: 20,
+        padding: 30,
+        paddingLeft: 20,
         fontSize: 20,
     },
     contentView: {
         backgroundColor: '#FFFFFF',
         flex: 1,
         flexDirection: 'row',
+        height: 100
     },
     slider: {
         width: 200,
-
+    },
+    OnOffSwitch: {
+        flex: 1,
+        flexDirection: 'row',
+        paddingRight: 20,
+        justifyContent: 'flex-end'
+    },
+    MySlider: {
     }
 });
