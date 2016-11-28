@@ -28,7 +28,7 @@ export default StyleSheet.create({
         height: 100
     },
     slider: {
-        width: 200,
+
     },
     OnOffSwitch: {
         flex: 1,

@@ -32,23 +32,22 @@ export class MySlider extends Component {
     this.state = this.props.state
     this.state.value = parseInt((this.state.maximum - this.state.minimum) / 2)
   }
-  handlePressMinus() {
-    this.setState({value: this.state.value - 1})
-  }
-  handlePressPlus() {
-    this.setState({value: this.state.value + 1})
+  handlePress(num) {
+    if (this.state.value + num <= this.state.maximum && this.state.value + num >= this.state.minimum) {
+      this.setState({value: this.state.value + num})
+    }
   }
   render() {
     return(
       <View style={styles.MySlider}>
         <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-          <Button style={{fontSize: 50, color: 'red'}}
+          <Button style={{fontSize: 55, color: 'red'}}
                   styleDisabled={{color: 'red'}}
-                  onPress={() => this.handlePressMinus()}>-</Button>
-          <Text style={{paddingLeft: 20, paddingRight: 20, fontSize: 40}}>{this.state.value || 0}</Text>
-          <Button style={{fontSize: 50, color: 'green'}}
+                  onPress={() => this.handlePress(-1)}> - </Button>
+          <Text style={{paddingLeft: 10, paddingRight: 10, fontSize: 40}}>{this.state.value || 0}</Text>
+          <Button style={{fontSize: 55, color: 'green'}}
                   styleDisabled={{color: 'red'}}
-                  onPress={() => this.handlePressPlus()}>+</Button>
+                  onPress={() => this.handlePress(1)}> + </Button>
         </View>
         <Slider
           style={styles.slider}
