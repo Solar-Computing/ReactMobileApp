@@ -29,5 +29,9 @@ export default StyleSheet.create({
         //paddingLeft: 40,
         textAlign: 'center',
         flex: 1
+    },
+    statusbarButton: {
+        justifyContent: 'center',
+        flex: 1
     }
 });
