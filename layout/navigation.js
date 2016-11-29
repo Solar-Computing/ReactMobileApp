@@ -5,8 +5,32 @@ import {
   Image
 } from 'react-native';
 import styles from './navigation_style.js';
+import Button from 'react-native-button';
 
 class Navigation extends Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        index: 0
+      }
+    }
+
+    handleSettings() {
+      this.props.toSettings()
+      this.setState({index: 0})
+      //set background of buttons
+    }
+    handleData() {
+      this.props.toData()
+      this.setState({index: 1})
+      //set background of buttons
+    }
+    handleFeed() {
+      this.props.toFeed()
+      this.setState({index: 2})
+      //set background of buttons
+    }
+
     render() {
       return (
           <View >
@@ -16,16 +40,30 @@ class Navigation extends Component {
                       source={require('./img/logo.png')}
                   />
               </View>
+
+
               <View style={styles.statusbar}>
+                  <Button
+                    onPress={() => this.handleSettings()}
+                    containerStyle={[styles.statusbarButton, this.state.index == 0 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Settings
                   </Text>
+                  </Button>
+                  <Button
+                    onPress={() => this.handleData()}
+                    containerStyle={[styles.statusbarButton, this.state.index == 1 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Data
                   </Text>
+                  </Button>
+                  <Button
+                    onPress={() => this.handleFeed()}
+                    containerStyle={[styles.statusbarButton, this.state.index == 2 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Feed
                   </Text>
+                  </Button>
               </View>
         </View>
       );
