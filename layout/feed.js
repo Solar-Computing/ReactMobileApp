@@ -72,7 +72,7 @@ class DataList extends Component {
     var imgMegaphone = require("./img/megaphone.png");
     var imgTarget = require("./img/target.png");
     var imgTrophy = require("./img/trophy.png");
-    var showImage = imgLightBulb;
+    var showImage = imgLogo;
     if (data.category == "logo") {
         showImage = imgLogo;
     }
@@ -87,6 +87,9 @@ class DataList extends Component {
     }
     if (data.category == "light-bulb") {
         showImage = imgLightBulb;
+    }
+    if (data.category == "announcement") {
+        showImage = imgMegaphone;
     }
     return (
         <View style={styles.cellContainer}>
