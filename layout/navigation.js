@@ -17,6 +17,8 @@ class Navigation extends Component {
                       source={require('./img/logo.png')}
                   />
               </View>
+
+              
               <View style={styles.statusbar}>
                   <Button 
                     onPress={() => this.props.toSettings()}

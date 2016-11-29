@@ -32,6 +32,8 @@ export default StyleSheet.create({
     },
     statusbarButton: {
         justifyContent: 'center',
-        flex: 1
+        flex: 1,
+        height:20,
+        width:25
     }
 });
