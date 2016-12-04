@@ -68,7 +68,6 @@ class App extends Component {
         toData={() => this.toData()}
         toSettings={() => this.toSettings()}
         ></Navigation>
-
         <Swiper
         ref={(swiper) => { ourSwiper = swiper; }}
         style={styles.wrapper}

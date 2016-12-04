@@ -5,8 +5,8 @@ import {
 export default StyleSheet.create({
     navbar: {
         backgroundColor: '#2c3239',
-        paddingTop:20,
-        paddingBottom: 2,
+        paddingTop:10,
+        paddingBottom: 0,
         justifyContent: 'center',
         flexDirection: 'row'
     },
@@ -21,12 +21,13 @@ export default StyleSheet.create({
         // paddingTop: 10,
         // paddingBottom: 10,
         justifyContent: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        height: 40
     },
     statusbarTitles: {
         color: '#FFFFFF',
         justifyContent: 'center',
-        paddingTop: 5,
+        paddingTop: 10,
         //paddingLeft: 40,
         textAlign: 'center',
         flex: 1
@@ -34,20 +35,22 @@ export default StyleSheet.create({
     statusbarButton: {
         justifyContent: 'center',
         flex: 1,
-        height:35,
-        width:25,
+        height:40,
+        width:60,
         backgroundColor: '#191f28',
         padding: 0
     },
     activebarButton: {
         justifyContent: 'center',
         flex: 1,
-        height:35,
-        width:25,
+        height:40,
+        width:60,
         backgroundColor: '#2c3239',
         padding: 0
     },
     activebarTitles: {
-        color: '#59bbda'
+        color: '#59bbda',
+        justifyContent: 'center',
+        textAlign: 'center'
     }
 });

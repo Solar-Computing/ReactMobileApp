@@ -47,25 +47,31 @@ class Navigation extends Component {
                     onPress={() => this.handleSettings()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 0 && styles.activebarButton]}
-                    style={[styles.statusbarTitles, 
+                    >
+                    <Text style={[styles.statusbarTitles, 
                       this.state.index == 0 && styles.activebarTitles]}>
                     Settings
+                    </Text>
                   </Button>
                   <Button
                     onPress={() => this.handleData()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 1 && styles.activebarButton]}
-                    style={[styles.statusbarTitles, 
+                    >
+                    <Text style={[styles.statusbarTitles, 
                       this.state.index == 1 && styles.activebarTitles]}>
                     Data
+                    </Text>
                   </Button>
                   <Button
                     onPress={() => this.handleFeed()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 2 && styles.activebarButton]}
-                    style={[styles.statusbarTitles, 
+                    >
+                    <Text style={[styles.statusbarTitles, 
                       this.state.index == 2 && styles.activebarTitles]}>
                     Feed
+                    </Text>
                   </Button>
               </View>
         </View>
