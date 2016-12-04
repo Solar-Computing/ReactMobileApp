@@ -45,21 +45,24 @@ class Navigation extends Component {
               <View style={styles.statusbar}>
                   <Button
                     onPress={() => this.handleSettings()}
-                    containerStyle={[styles.statusbarButton, this.state.index == 0 && styles.activebarButton]}>
+                    containerStyle={[styles.statusbarButton, 
+                      this.state.index == 0 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Settings
                   </Text>
                   </Button>
                   <Button
                     onPress={() => this.handleData()}
-                    containerStyle={[styles.statusbarButton, this.state.index == 1 && styles.activebarButton]}>
+                    containerStyle={[styles.statusbarButton, 
+                      this.state.index == 1 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Data
                   </Text>
                   </Button>
                   <Button
                     onPress={() => this.handleFeed()}
-                    containerStyle={[styles.statusbarButton, this.state.index == 2 && styles.activebarButton]}>
+                    containerStyle={[styles.statusbarButton, 
+                      this.state.index == 2 && styles.activebarButton]}>
                   <Text style={styles.statusbarTitles}>
                       Feed
                   </Text>

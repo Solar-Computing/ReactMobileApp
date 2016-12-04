@@ -26,7 +26,7 @@ class DataList extends Component {
 
   searchApi() {
       const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      console.log("Fetching update data");
+      //console.log("Fetching update data");
       fetch("http://jarvis.jarvisnet.ga:8165/test_leonie.php").then((loadedData) => {
           this.setState({resultsData: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
       }).catch((error) => {
@@ -72,7 +72,7 @@ class DataList extends Component {
     var imgMegaphone = require("./img/megaphone.png");
     var imgTarget = require("./img/target.png");
     var imgTrophy = require("./img/trophy.png");
-    var showImage = imgLightBulb;
+    var showImage = imgLogo;
     if (data.category == "logo") {
         showImage = imgLogo;
     }
@@ -87,6 +87,9 @@ class DataList extends Component {
     }
     if (data.category == "light-bulb") {
         showImage = imgLightBulb;
+    }
+    if (data.category == "announcement") {
+        showImage = imgMegaphone;
     }
     return (
         <View style={styles.cellContainer}>

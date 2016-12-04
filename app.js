@@ -37,18 +37,41 @@ class App extends Component {
     this.setState({index: 2})
   }
 
+  updateIndex() {
+    //this.setState({index: ourSwiper.state.index})
+    switch(ourSwiper.state.index) {
+      case 0:
+        this.refs.navigation.setState({index: 0});
+        this.setState({index: 0});
+        //Alert.alert('test','0');
+        break;
+      case 1:
+        this.refs.navigation.setState({index: 1});
+        this.setState({index: 1});
+        //Alert.alert('test','1');
+        break;
+      case 2:
+        this.refs.navigation.setState({index: 2});
+        this.setState({index: 2});
+        //Alert.alert('test','2');
+    }
+  }
+
 
   render() {
     return (
       <View>
         <Navigation
+        ref = "navigation"
         toFeed={() => this.toFeed()}
         toData={() => this.toData()}
         toSettings={() => this.toSettings()}
         ></Navigation>
+
         <Swiper
         ref={(swiper) => { ourSwiper = swiper; }}
         style={styles.wrapper}
+        onMomentumScrollEnd={() => this.updateIndex()}
         loop={false}
         index={this.state.index}>
           <View style={styles.slide1}>

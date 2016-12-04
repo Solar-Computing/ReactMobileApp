@@ -68,7 +68,7 @@ class ListOfRooms extends Component {
   }
   componentDidMount() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    console.log("fetching...");
+    //console.log("fetching...");
     fetch("http://jarvis.jarvisnet.ga:8165/test.php").then((loadedData) => {
         this.setState({dataSource: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
     }).catch((error) => {
