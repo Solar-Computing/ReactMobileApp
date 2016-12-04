@@ -38,19 +38,22 @@ class App extends Component {
   }
 
   updateIndex() {
-    this.setState({index: ourSwiper.state.index})
-    switch(this.state.index) {
+    //this.setState({index: ourSwiper.state.index})
+    switch(ourSwiper.state.index) {
       case 0:
-        this.refs.navigation.handleSettings();
-        Alert.alert('test','0');
+        this.refs.navigation.setState({index: 0});
+        this.setState({index: 0});
+        //Alert.alert('test','0');
         break;
       case 1:
-        this.refs.navigation.handleData();
-        Alert.alert('test','1');
+        this.refs.navigation.setState({index: 1});
+        this.setState({index: 1});
+        //Alert.alert('test','1');
         break;
       case 2:
-        this.refs.navigation.handleFeed();
-        Alert.alert('test','2');
+        this.refs.navigation.setState({index: 2});
+        this.setState({index: 2});
+        //Alert.alert('test','2');
     }
   }
 
@@ -64,6 +67,7 @@ class App extends Component {
         toData={() => this.toData()}
         toSettings={() => this.toSettings()}
         ></Navigation>
+
         <Swiper
         ref={(swiper) => { ourSwiper = swiper; }}
         style={styles.wrapper}
