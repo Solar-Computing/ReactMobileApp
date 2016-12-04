@@ -4,8 +4,7 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  Alert,
-  Image
+  Alert
 } from 'react-native';
 import DataList from './layout/feed.js';
 import Navigation from './layout/navigation.js';
@@ -79,11 +78,7 @@ class App extends Component {
             <SettingsPage></SettingsPage>
           </View>
           <View style={styles.slide2}>
-            <Image
-                source={require("./layout/img/charts_without_nav.jpg")}
-                resizeMode="stretch"
-                style={{flexShrink:1, height: 430, }}
-            />
+            <Text style={styles.text}>Sujeeths Page</Text>
           </View>
           <View style={styles.slide3}>
             <DataList></DataList>
