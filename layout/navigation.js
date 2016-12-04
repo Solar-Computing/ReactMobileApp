@@ -32,7 +32,6 @@ class Navigation extends Component {
         this.props.toFeed()
         this.setState({index: 2})
       }
-      //set background of buttons
     }
 
     render() {

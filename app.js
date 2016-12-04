@@ -39,22 +39,18 @@ class App extends Component {
   }
 
   updateIndex() {
-    //this.setState({index: ourSwiper.state.index})
     switch(ourSwiper.state.index) {
       case 0:
         this.refs.navigation.setState({index: 0});
         this.setState({index: 0});
-        //Alert.alert('test','0');
         break;
       case 1:
         this.refs.navigation.setState({index: 1});
         this.setState({index: 1});
-        //Alert.alert('test','1');
         break;
       case 2:
         this.refs.navigation.setState({index: 2});
         this.setState({index: 2});
-        //Alert.alert('test','2');
     }
   }
 
