@@ -46,5 +46,8 @@ export default StyleSheet.create({
         width:25,
         backgroundColor: '#2c3239',
         padding: 0
+    },
+    activebarTitles: {
+        color: '#59bbda'
     }
 });
