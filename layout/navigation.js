@@ -16,18 +16,22 @@ class Navigation extends Component {
     }
 
     handleSettings() {
-      this.props.toSettings()
-      this.setState({index: 0})
-      //set background of buttons
+      if (this.state.index != 0) {
+        this.props.toSettings()
+        this.setState({index: 0})
+      }
     }
     handleData() {
-      this.props.toData()
-      this.setState({index: 1})
-      //set background of buttons
+      if (this.state.index != 1) {
+        this.props.toData()
+        this.setState({index: 1})
+      }
     }
     handleFeed() {
-      this.props.toFeed()
-      this.setState({index: 2})
+      if (this.state.index != 2) {
+        this.props.toFeed()
+        this.setState({index: 2})
+      }
       //set background of buttons
     }
 
@@ -44,6 +48,7 @@ class Navigation extends Component {
 
               <View style={styles.statusbar}>
                   <Button
+                    disabled={this.state.index == 0}
                     onPress={() => this.handleSettings()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 0 && styles.activebarButton]}
@@ -54,6 +59,7 @@ class Navigation extends Component {
                     </Text>
                   </Button>
                   <Button
+                    disabled={this.state.index == 1}
                     onPress={() => this.handleData()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 1 && styles.activebarButton]}
@@ -64,6 +70,7 @@ class Navigation extends Component {
                     </Text>
                   </Button>
                   <Button
+                    disabled={this.state.index == 2}
                     onPress={() => this.handleFeed()}
                     containerStyle={[styles.statusbarButton, 
                       this.state.index == 2 && styles.activebarButton]}
