@@ -26,7 +26,7 @@ class DataList extends Component {
 
   searchApi() {
       const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      console.log("Fetching update data");
+      //console.log("Fetching update data");
       fetch("http://jarvis.jarvisnet.ga:8165/test_leonie.php").then((loadedData) => {
           this.setState({resultsData: ds.cloneWithRows(JSON.parse(loadedData._bodyInit))});
       }).catch((error) => {
