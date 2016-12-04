@@ -22,7 +22,8 @@ class GraphPage extends Component {
     return (
       <View style={{alignItems: 'center'}}>
 
-      <Player/>
+      //<Player/>
+
 
       </View>
     );
