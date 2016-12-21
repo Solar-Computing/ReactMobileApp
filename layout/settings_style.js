@@ -28,7 +28,6 @@ export default StyleSheet.create({
         height: 100
     },
     slider: {
-
     },
     OnOffSwitch: {
         flex: 1,
@@ -37,5 +36,8 @@ export default StyleSheet.create({
         justifyContent: 'flex-end'
     },
     MySlider: {
+        width: 200,
+        justifyContent: 'center',
+        paddingRight: 10,
     }
 });

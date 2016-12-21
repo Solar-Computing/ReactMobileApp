@@ -44,7 +44,7 @@ export class MySlider extends Component {
           <Button style={{fontSize: 55, color: 'red'}}
                   styleDisabled={{color: 'red'}}
                   onPress={() => this.handlePress(-1)}> - </Button>
-          <Text style={{paddingLeft: 10, paddingRight: 10, fontSize: 40}}>{this.state.value || 0}</Text>
+          <Text style={{paddingLeft: 10, paddingRight: 10, fontSize: 40}}>{this.state.value || "000"}</Text>
           <Button style={{fontSize: 55, color: 'green'}}
                   styleDisabled={{color: 'red'}}
                   onPress={() => this.handlePress(1)}> + </Button>
