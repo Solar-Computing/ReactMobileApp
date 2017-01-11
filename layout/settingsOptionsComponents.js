@@ -17,9 +17,40 @@ export class OnOffSwitch extends Component {
     return (
       <View style={styles.OnOffSwitch}>
         <Switch
-          onValueChange={(value) => {this.setState({"switchIsOn": value});
-                                      console.log(this.state);}}
-          value={this.state.switchIsOn}
+          onValueChange={(value) => {console.log(this.props); this.setState({"switchIsOn": value});
+                                      this.props.state.switchIsOn = value;
+                                      console.log(this.props);
+                                      console.log("SPACE")
+                                    }}
+          value={this.props.state.switchIsOn}
+        />
+      </View>
+    );
+  }
+}
+
+export class ToggleSwitch extends Component {
+  constructor(props) {
+    super(props)
+    this.state = this.props.state.toggle
+  }
+  updateSwitches(value) {
+    for (i = 0; i < this.props.state.options.length; i++) {
+      if (this.props.state.options[i].optionType == 'switch') {
+        this.props.state.options[i].state.switchIsOn = value;
+      }
+    }
+    this.props.updateMethod(value);
+  }
+  render() {
+    return (
+      <View style={styles.OnOffSwitch}>
+        <Switch
+          onValueChange={(value) => {this.setState({"switchIsOn": value}); 
+                                      this.props.state.toggle.switchIsOn = value;
+                                      this.updateSwitches(value);
+                                    }}
+          value={this.props.state.toggle.switchIsOn}
         />
       </View>
     );

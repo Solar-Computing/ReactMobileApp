@@ -9,7 +9,7 @@ export default StyleSheet.create({
         color: '#59bbda'
     },
     headerView: {
-        alignItems: 'center',
+        flexDirection: 'row',
         padding: 25,
         backgroundColor: '#e5e5ff',
         borderStyle: 'solid',
