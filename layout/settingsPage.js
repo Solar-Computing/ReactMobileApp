@@ -8,43 +8,47 @@ import {
 } from 'react-native';
 import Accordion from 'react-native-accordion';
 import styles from './settings_style.js';
-import { MySlider, OnOffSwitch } from './settingsOptionsComponents.js';
+import { MySlider, OnOffSwitch, ToggleSwitch } from './settingsOptionsComponents.js';
 
 const optionComponents = {
   switch: OnOffSwitch,
   slider: MySlider
 };
 
+var my_switch : OnOffSwitch;
+var allSwitches = [];
+
 // myData = [
-//   {"name": "General", "options": [
+//   {"name": "General", "state": {"switchIsOn": false}, "options": [
 //     {"name": "Temperature", "optionType": "slider", "state": {"minimum": "20", "maximum":"120"}},
 //     {"name": "Microwave", "optionType": "switch", "state": {"switchIsOn": false}},
 //     {"name": "Dishwasher", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
-//   {"name": "Kitchen", "options": [
+//   },
+//   {"name": "Kitchen", "state": {"switchIsOn": false}, "options": [
 //     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
 //     {"name": "Microwave", "optionType": "switch", "state": {"switchIsOn": false}},
 //     {"name": "Dishwasher", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
 //   },
-//   {"name": "Living Room", "options": [
-//     {"name": "Light 1", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Light 2", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": true}}
+//   {"name": "Living Room", "state": {"switchIsOn": false}, "options": [
+//     {"name": "Light 1", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Light 2", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
 //   },
-//   {"name": "Bed Room", "options": [
-//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Heater", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}},
-//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": true}}
+//   {"name": "Bed Room", "state": {"switchIsOn": false}, "options": [
+//     {"name": "Outlet 1", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Outlet 2", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Heater", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}},
+//     {"name": "Lights", "optionType": "switch", "state": {"switchIsOn": false}}
 //     ]
 //   }
 // ]
@@ -74,7 +78,7 @@ class ListOfRooms extends Component {
     }).catch((error) => {
       console.log("Error... " + error);
     });
-  }
+  } 
   render() {
     return (
       <ListView
@@ -84,18 +88,40 @@ class ListOfRooms extends Component {
       />
     );
   }
-  ///
   renderCollapsibleRow(rowData) {
+    console.log("Hoooo");
+    return (
+      <MyAccordion
+        state={rowData}
+      />
+    );
+  }
+}
+
+class MyAccordion extends Component {
+  constructor(props) {
+    super(props);
+    this.state = this.props.state;
+  }
+
+  myMethod(value) {
+    for (var i = 0; i < allSwitches.length; i++) {
+      if (typeof allSwitches[i]===typeof allSwitches[1] && allSwitches[i] != null) {
+        allSwitches[i].setState({"switchIsOn": value})
+      }
+    }
+  }
+
+  render() {
     var header = (
       <View style={styles.headerView}>
-        <Text style={styles.headerText}>{rowData.name}</Text>
+        <Text style={styles.headerText}>{this.state.name}</Text>
+        <ToggleSwitch state={this.state} updateMethod={(value) => this.myMethod(value)}/>
       </View>
     );
-
     var content = (
-      <RoomOptions data={rowData.options}></RoomOptions>
+      <RoomOptions data={this.state}></RoomOptions>
     );
- ///
     return (
       <Accordion
         header={header}
@@ -104,13 +130,13 @@ class ListOfRooms extends Component {
     );
   }
 }
-///
+
 class RoomOptions extends Component {
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: ds.cloneWithRows(this.props.data),
+      dataSource: ds.cloneWithRows(this.props.data.options),
     };
   }
   render() {
@@ -121,7 +147,7 @@ class RoomOptions extends Component {
       />
     );
   }
-    ///
+
   renderOptionRow(rowData) {
     const SpecificType = optionComponents[rowData.optionType];
     return (
@@ -129,11 +155,11 @@ class RoomOptions extends Component {
         <View>
           <Text style={styles.contentText}>{rowData.name}</Text>
         </View>
-        <SpecificType state={rowData.state}></SpecificType>
+        <SpecificType state={rowData.state} ref={(mswitch) => { my_switch = mswitch; allSwitches.push(my_switch); }}></SpecificType>
       </View>
     );
   }
 }
-///
+
 
 export default SettingsPage;
