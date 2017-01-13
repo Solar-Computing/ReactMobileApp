@@ -78,7 +78,7 @@ class ListOfRooms extends Component {
     }).catch((error) => {
       console.log("Error... " + error);
     });
-  }
+  } 
   render() {
     return (
       <ListView
@@ -88,10 +88,7 @@ class ListOfRooms extends Component {
       />
     );
   }
-  ////
   renderCollapsibleRow(rowData) {
-    
- ///
     console.log("Hoooo");
     return (
       <MyAccordion
@@ -100,7 +97,6 @@ class ListOfRooms extends Component {
     );
   }
 }
-///
 
 class MyAccordion extends Component {
   constructor(props) {
@@ -151,7 +147,7 @@ class RoomOptions extends Component {
       />
     );
   }
-    ///
+
   renderOptionRow(rowData) {
     const SpecificType = optionComponents[rowData.optionType];
     return (
@@ -164,6 +160,6 @@ class RoomOptions extends Component {
     );
   }
 }
-///
+
 
 export default SettingsPage;

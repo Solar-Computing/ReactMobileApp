@@ -5,8 +5,8 @@ import {
   Text,
   Slider
 } from 'react-native';
-import Button from 'react-native-button'
-import styles from './settings_style.js'
+import Button from 'react-native-button';
+import styles from './settings_style.js';
 
 export class OnOffSwitch extends Component {
   constructor(props) {
