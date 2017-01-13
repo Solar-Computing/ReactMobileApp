@@ -17,10 +17,8 @@ export class OnOffSwitch extends Component {
     return (
       <View style={styles.OnOffSwitch}>
         <Switch
-          onValueChange={(value) => {console.log(this.props); this.setState({"switchIsOn": value});
+          onValueChange={(value) => {this.setState({"switchIsOn": value});
                                       this.props.state.switchIsOn = value;
-                                      console.log(this.props);
-                                      console.log("SPACE")
                                     }}
           value={this.props.state.switchIsOn}
         />

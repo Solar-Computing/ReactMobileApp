@@ -88,7 +88,6 @@ class ListOfRooms extends Component {
     );
   }
   renderCollapsibleRow(rowData) {
-    console.log("Hoooo");
     return (
       <MyAccordion
         state={rowData}
