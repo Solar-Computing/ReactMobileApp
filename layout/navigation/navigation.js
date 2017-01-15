@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
   Image
 } from 'react-native';
-import styles from './navigation_style.js';
 import Button from 'react-native-button';
+import styles from './navigation_style.js';
+
 
 class Navigation extends Component {
     constructor(props) {
-      super(props)
+      super(props);
       this.state = {
         index: 0
-      }
+      };
     }
 
     handleSettings() {
@@ -40,7 +41,7 @@ class Navigation extends Component {
               <View style={styles.navbar}>
                   <Image
                       style={styles.navBarImage}
-                      source={require('./img/logo.png')}
+                      source={require('../img/logo.png')}
                   />
               </View>
 
