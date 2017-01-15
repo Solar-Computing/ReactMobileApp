@@ -5,7 +5,6 @@ import {
 } from 'react-native';
 import App from './app.js';
 
-
 class Home extends Component {
   render() {
     return (
@@ -16,4 +15,4 @@ class Home extends Component {
   }
 }
 
-AppRegistry.registerComponent('Home', () => Home);
+AppRegistry.registerComponent('SolarApp', () => Home);

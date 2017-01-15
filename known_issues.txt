@@ -1,0 +1,7 @@
+Known issues:
+	Android:
+		1) There appears to be an issue with uploading the app using "react-native run-android"
+			temp solution: If you have the app on your phone, open it, connect to your development server via shakey-shakey and reload.
+	iOS:
+		1) App is functional, but data cannot be loaded because the http request is insecure.
+			no temp solution.
