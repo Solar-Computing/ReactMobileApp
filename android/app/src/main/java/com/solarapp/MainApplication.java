@@ -3,6 +3,8 @@ package com.solarapp;
 import android.app.Application;
 import android.util.Log;
 
+import com.beefe.picker.PickerViewPackage;
+import com.facebook.react.BuildConfig;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
