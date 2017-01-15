@@ -10,7 +10,7 @@ import {
 import DataList from './layout/feed.js';
 import Navigation from './layout/navigation.js';
 import Swiper from 'react-native-swiper';
-import SettingsPage from './layout/settingsPage.js';
+import SettingsPage from './layout/settings/settingsPage.js';
 import styles from './layout/styles.js';
 
 var ourSwiper: Swiper;

@@ -10,14 +10,15 @@ import styles from './settings_style.js';
 
 export class OnOffSwitch extends Component {
   constructor(props) {
-    super(props)
-    this.state = this.props.state
+    super(props);
+    this.state = this.props.state;
   }
   render() {
     return (
       <View style={styles.OnOffSwitch}>
         <Switch
-          onValueChange={(value) => {this.setState({"switchIsOn": value});
+          onValueChange={(value) => {
+            this.setState({ switchIsOn: value });
                                       this.props.state.switchIsOn = value;
                                     }}
           value={this.props.state.switchIsOn}
@@ -29,12 +30,12 @@ export class OnOffSwitch extends Component {
 
 export class ToggleSwitch extends Component {
   constructor(props) {
-    super(props)
-    this.state = this.props.state.toggle
+    super(props);
+    this.state = this.props.state.toggle;
   }
   updateSwitches(value) {
-    for (i = 0; i < this.props.state.options.length; i++) {
-      if (this.props.state.options[i].optionType == 'switch') {
+    for (let i = 0; i < this.props.state.options.length; i++) {
+      if (this.props.state.options[i].optionType === 'switch') {
         this.props.state.options[i].state.switchIsOn = value;
       }
     }
@@ -44,7 +45,8 @@ export class ToggleSwitch extends Component {
     return (
       <View style={styles.OnOffSwitch}>
         <Switch
-          onValueChange={(value) => {this.setState({"switchIsOn": value}); 
+          onValueChange={(value) => { 
+                                      this.setState({ switchIsOn: value }); 
                                       this.props.state.toggle.switchIsOn = value;
                                       this.updateSwitches(value);
                                     }}
@@ -57,26 +59,32 @@ export class ToggleSwitch extends Component {
 
 export class MySlider extends Component {
   constructor(props) {
-    super(props)
-    this.state = this.props.state
-    this.state.value = parseInt((this.state.maximum - this.state.minimum) / 2)
+    super(props);
+    this.state = this.props.state;
+    this.state.value = parseInt((this.state.maximum - this.state.minimum) / 2);
   }
   handlePress(num) {
-    if (this.state.value + num <= this.state.maximum && this.state.value + num >= this.state.minimum) {
-      this.setState({value: this.state.value + num})
+    if (this.state.value + num <= this.state.maximum
+      && this.state.value + num >= this.state.minimum) {
+      this.setState({ value: this.state.value + num });
     }
   }
   render() {
-    return(
+    return (
       <View style={styles.MySlider}>
-        <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-          <Button style={{fontSize: 55, color: 'red'}}
-                  styleDisabled={{color: 'red'}}
-                  onPress={() => this.handlePress(-1)}> - </Button>
-          <Text style={{paddingLeft: 10, paddingRight: 10, fontSize: 40}}>{this.state.value || "000"}</Text>
-          <Button style={{fontSize: 55, color: 'green'}}
-                  styleDisabled={{color: 'red'}}
-                  onPress={() => this.handlePress(1)}> + </Button>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+          <Button
+                  style={{ fontSize: 55, color: 'red' }}
+                  styleDisabled={{ color: 'red' }}
+                  onPress={() => this.handlePress(-1)}
+          > - </Button>
+          <Text style={{ paddingLeft: 10, paddingRight: 10, fontSize: 40 }}>
+          {this.state.value || '000'}</Text>
+          <Button 
+                  style={{ fontSize: 55, color: 'green' }}
+                  styleDisabled={{ color: 'red' }}
+                  onPress={() => this.handlePress(1)}
+          > + </Button>
         </View>
         <Slider
           style={styles.slider}
@@ -84,7 +92,8 @@ export class MySlider extends Component {
           minimumValue={parseInt(this.state.minimum)}
           maximumValue={parseInt(this.state.maximum)}
           step={1}
-          onValueChange={(value) => this.setState({value})}/>
+          onValueChange={(value) => this.setState({ value })}
+        />
       </View>
     );
   }
