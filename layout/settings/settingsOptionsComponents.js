@@ -8,7 +8,7 @@ import {
 import Button from 'react-native-button';
 import styles from './settings_style.js';
 
-export class OnOffSwitch extends Component {
+export class SubSwitch extends Component {
   constructor(props) {
     super(props);
     this.state = this.props.state;
@@ -28,18 +28,18 @@ export class OnOffSwitch extends Component {
   }
 }
 
-export class ToggleSwitch extends Component {
+export class RoomSwitch extends Component {
   constructor(props) {
     super(props);
     this.state = this.props.state.toggle;
   }
-  updateSwitches(value) {
+  roomUpdate(value) {
     for (let i = 0; i < this.props.state.options.length; i++) {
       if (this.props.state.options[i].optionType === 'switch') {
         this.props.state.options[i].state.switchIsOn = value;
       }
     }
-    this.props.updateMethod(value);
+    this.props.update(value);
   }
   render() {
     return (
@@ -48,7 +48,7 @@ export class ToggleSwitch extends Component {
           onValueChange={(value) => { 
                                       this.setState({ switchIsOn: value }); 
                                       this.props.state.toggle.switchIsOn = value;
-                                      this.updateSwitches(value);
+                                      this.roomUpdate(value);
                                     }}
           value={this.props.state.toggle.switchIsOn}
         />

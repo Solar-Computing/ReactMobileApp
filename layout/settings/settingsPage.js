@@ -6,14 +6,14 @@ import {
 } from 'react-native';
 import Accordion from 'react-native-accordion';
 import styles from './settings_style.js';
-import { MySlider, OnOffSwitch, ToggleSwitch } from './settingsOptionsComponents.js';
+import { MySlider, SubSwitch, RoomSwitch } from './settingsOptionsComponents.js';
 
 const optionComponents = {
-  switch: OnOffSwitch,
+  switch: SubSwitch,
   slider: MySlider
 };
 
-let mySwitch: OnOffSwitch;
+let mySwitch: SubSwitch;
 const allSwitches = [];
 
 // myData = [
@@ -100,10 +100,10 @@ class MyAccordion extends Component {
     this.state = this.props.state;
   }
 
-  myMethod(value) {
+  updateSwitches(value) {
     for (let i = 0; i < allSwitches.length; i++) {
       if (typeof allSwitches[i] === typeof allSwitches[1] && allSwitches[i] != null) {
-        allSwitches[i].setState({ switchIsOn: value })
+        allSwitches[i].setState({ switchIsOn: value });
       }
     }
   }
@@ -112,7 +112,7 @@ class MyAccordion extends Component {
     const header = (
       <View style={styles.headerView}>
         <Text style={styles.headerText}>{this.state.name}</Text>
-        <ToggleSwitch state={this.state} updateMethod={(value) => this.myMethod(value)}/>
+        <RoomSwitch state={this.state} update={(value) => this.updateSwitches(value)} />
       </View>
     );
     const content = (
@@ -135,14 +135,6 @@ class RoomOptions extends Component {
       dataSource: ds.cloneWithRows(this.props.data.options),
     };
   }
-  render() {
-    return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderRow={this.renderOptionRow}
-      />
-    );
-  }
 
   renderOptionRow(rowData) {
     const SpecificType = optionComponents[rowData.optionType];
@@ -156,6 +148,15 @@ class RoomOptions extends Component {
           ref={(mswitch) => { mySwitch = mswitch; allSwitches.push(mySwitch); }}
         />
       </View>
+    );
+  }
+
+  render() {
+    return (
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderOptionRow}
+      />
     );
   }
 }
