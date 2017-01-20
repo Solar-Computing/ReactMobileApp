@@ -5,7 +5,7 @@ import {
 export default StyleSheet.create({
     navbar: {
         backgroundColor: '#2c3239',
-        paddingTop:10,
+        paddingTop: 10,
         paddingBottom: 0,
         justifyContent: 'center',
         flexDirection: 'row'
@@ -35,16 +35,16 @@ export default StyleSheet.create({
     statusbarButton: {
         justifyContent: 'center',
         flex: 1,
-        height:40,
-        width:60,
+        height: 40,
+        width: 60,
         backgroundColor: '#191f28',
         padding: 0
     },
     activebarButton: {
         justifyContent: 'center',
         flex: 1,
-        height:40,
-        width:60,
+        height: 40,
+        width: 60,
         backgroundColor: '#2c3239',
         padding: 0
     },
