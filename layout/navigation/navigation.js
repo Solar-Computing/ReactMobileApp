@@ -4,8 +4,9 @@ import {
   Text,
   Image
 } from 'react-native';
-import styles from './navigation_style.js';
 import Button from 'react-native-button';
+import styles from './navigation_style.js';
+
 
 class Navigation extends Component {
   constructor(props) {
@@ -16,19 +17,19 @@ class Navigation extends Component {
   }
 
   handleSettings() {
-    if (this.state.index != 0) {
+    if (this.state.index !== 0) {
       this.props.toSettings();
       this.setState({ index: 0 });
     }
   }
   handleData() {
-    if (this.state.index != 1) {
+    if (this.state.index !== 1) {
       this.props.toData();
       this.setState({ index: 1 });
     }
   }
   handleFeed() {
-    if (this.state.index != 2) {
+    if (this.state.index !== 2) {
       this.props.toFeed();
       this.setState({ index: 2 });
     }
@@ -40,7 +41,7 @@ class Navigation extends Component {
         <View style={styles.navbar}>
           <Image
             style={styles.navBarImage}
-            source={require('./img/logo.png')}
+            source={require('../img/logo.png')}
           />
         </View>
 

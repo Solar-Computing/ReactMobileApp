@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   AppRegistry,
   View
@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <View>
-        <App></App>
+        <App />
       </View>
     );
   }
